@@ -23,6 +23,7 @@ export default {
 let sendEmail = async(data: any, env: Env) => {
 	let {sendTo, replyTo, replyToName = "", subject = "", message = ""} = data
 	let fromEmail = "ken@thangbom.life" // add your from email
+	let fromName = "Weaverse"
 	let dkim_domain = "thangbom.life"
 	let dkim_selector = "mailchannels"
 	
@@ -45,7 +46,7 @@ let sendEmail = async(data: any, env: Env) => {
 				},
 			],
 			from: {
-				name: "Weaverse",
+				name: fromName,
 				email: fromEmail,
 			},
 			reply_to: {
